@@ -20,9 +20,15 @@ module.exports = {
 
   devServer: {
     port: 8000,
-
+    historyApiFallback: true,
     //HMR은 브라우저를 새로 고치지 않아도 웹팩으로 빌드한 결과물이 웹 애플리케이션에 실시간으로 반영될 수 있게 도와주는 설정
     hot: true,
+
+    //서버에 콘텐츠를 제공할 위치
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
+    proxy: {},
   },
 
   //로더
@@ -81,7 +87,7 @@ module.exports = {
     //웹펙으로 빌드한 결과물로 HTML파일을 생성해주는 플러그인
     new HtmlWebpackPlugin({
       // index.html 템플릿을 기반으로 빌드 결과물을 추가해줌
-      template: "index.html",
+      template: "./index.html",
     }),
 
     //웹펙의 빌드 진행율을 표시해주는 플러그인

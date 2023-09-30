@@ -5,8 +5,8 @@
   "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "dev": "webpack serve",
+    "build": "webpack --mode production",
+    "dev": "webpack serve --open --mode development",
     "development": "npm run build --env mode=development",
     "production": "npm run build --env mode=production"
   },
