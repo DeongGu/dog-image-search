@@ -2,7 +2,7 @@
   "name": "dog-image-search",
   "version": "1.0.0",
   "description": "강아지 사진 API을 활용해보는 연습",
-  "main": "App.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
@@ -11,7 +11,7 @@
     "production": "npm run build --env mode=production"
   },
   "keywords": [],
-  "author": "",
+  "author": "deonggu",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.22.20",

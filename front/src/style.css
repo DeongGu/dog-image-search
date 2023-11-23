@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "DNFBitBitv2";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf")
+    format("opentype");
+}
+
 html,
 body,
 div,
@@ -86,6 +94,7 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
+  font-family: DNFBitBitv2;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -125,8 +134,11 @@ table {
   border-spacing: 0;
 }
 
-#App {
+#app {
   margin: 1.5em auto;
   max-width: 1200px;
   column-gap: 1.5em;
+}
+
+.searchInput {
 }
