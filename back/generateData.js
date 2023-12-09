@@ -9,11 +9,6 @@ const BREEDS_COUNT = 264;
 const MAX_PAGE_NUMBER = 100;
 const PER_PAGE = 20;
 
-if (fs.existsSync("data.json")) {
-  console.log("DATA.json exists. Exiting...");
-  return;
-}
-
 const fetchApi = (apiKey = "", url) => {
   const instance = axiosRateLimit(
     axios.create({
@@ -96,7 +91,7 @@ const allRequests = async () => {
       JSON.stringify(allResponses),
       "utf8",
       () => {
-        console.log(`crwaling success. total data: ${allResponses.length}`);
+        console.log(`crawling success. total data: ${allResponses.length}`);
       }
     );
   } catch (err) {
