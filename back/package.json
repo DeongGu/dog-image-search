@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node generateData.js && nodemon babel-node index.js"
+    "start": "nodemon babel-node index.js"
   },
   "author": "deonggu",
   "license": "ISC",
