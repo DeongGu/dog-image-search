@@ -71,7 +71,7 @@ router.get("/:dogName", async (req, res) => {
 
       const breedList = Object.keys(engnameId)
         .map((el) => {
-          if (el.toLowerCase().indexOf(newKeyword) !== -1) {
+          if (el.toLowerCase().split(" ").join("").indexOf(newKeyword) !== -1) {
             return engnameId[el];
           }
         })

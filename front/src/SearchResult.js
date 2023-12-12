@@ -8,20 +8,24 @@ export default class SearchResult {
     this.onClick = onClick;
 
     this.$searchResult = document.createElement("div");
-    this.$searchResult.className = "SearchResult";
+    this.$searchResult.className = "searchResult";
     this.$target.appendChild(this.$searchResult);
   }
 
   render() {
-    const images = [];
+    this.$searchResult.innerHTML = "";
+
     this.DATA.map((dog) => {
       dog.images.forEach((image) => {
-        images.push(image.largeImageURL);
+        this.$searchResult.innerHTML += `
+          <div class="item">
+            <img src=${image.largeImageURL} alt=${dog.name} />
+          </div>`;
       });
     });
-    images.map((item) => {
-      this.$searchResult.innerHTML += `<img src=${item} />`;
-    });
+
+    const items = document.querySelectorAll(".item");
+    items.forEach((item) => {});
   }
 
   setState(newData) {
